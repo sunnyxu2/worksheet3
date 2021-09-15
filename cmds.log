@@ -1,0 +1,212 @@
+    1  history
+    2  
+    3  grep $'[0-9]\t[A-Z]\tY\t' -m 1 amazon_reviews_us_Books_v1_02.tsv 
+    4  grep $'[0-9]\t[A-Z]\tN\t' -m 1 amazon_reviews_us_Books_v1_02.tsv 
+    5  grep $'[0-9]\t[A-Z]\tN\t' amazon_reviews_us_Books_v1_02.tsv > unverified.txt
+    6  grep $'[0-9]\t[A-Z]\tY\t' amazon_reviews_us_Books_v1_02.tsv > verified.txt
+    7  wc unverified.txt > counts.txt
+    8  wc verified.txt >> counts.txt
+    9  cat counts.txt
+   10  history
+   11  vi counts.txt
+   12  cat counts.txt
+   13  history
+   14  cd worksheet2
+   15  ls
+   16  cd
+   17  mv counts.txt worksheet2
+   18  history > /worksheet2/cmds.log
+   19  history > cmds.log
+   20  mv cmds.log worksheet2
+   21  cd worksheet2
+   22  ls
+   23  git init
+   24  git remote add origin https://github.com/sunnyxu2/worksheet2.git
+   25  git add .
+   26  git log
+   27  git status
+   28  git commit -m "Initial commit"
+   29  git push -u origin main
+   30  git branch -M main
+   31  git push -u origin main
+   32  sudo
+   33  sudo reboot
+   34  home
+   35  cd
+   36  cd .
+   37  cd worksheet
+   38  cd worksheet1
+   39  cd ..
+   40  uid
+   41  userid
+   42  id
+   43  script assignment1.txt
+   44  cd worksheet1
+   45  cd
+   46  id
+   47  mkdir temp
+   48  ls -l temp
+   49  ls -l
+   50  chmod 675 temp
+   51  ls -l
+   52  cd temp
+   53  ls temp
+   54  ls -l temp
+   55  mkdir MVorCP
+   56  mkdir dummy
+   57  mv MVorCP dummy
+   58  ls MVorCP
+   59  ls dummy
+   60  cp dummy dummy2
+   61  ls
+   62  mkdir dummy2
+   63  cd dummy2 dummy3
+   64  cp dummy2 dummy3
+   65  cp dummy2
+   66  ls /proc/
+   67  cat /proc/meminfo
+   68  head /proc/meminfo
+   69  tail /proc/cpuinfo
+   70  ls -h
+   71  ls -lh
+   72  grep -i "great" amazon_reviews_us_Books_v1_02.tsv 
+   73  cd dummy
+   74  cd
+   75  id
+   76  mkdir temp
+   77  chmod 675 temp
+   78  history > /temp/test.txt
+   79  cd temp
+   80  ls temp
+   81  ls -l temp
+   82  mv temp dummy
+   83  cp dummy dummy9001
+   84  cp -r dummy dummy9001
+   85  ls dummy9001
+   86  ls /proc/
+   87  head /proc/meminfo
+   88  tail /proc/cpuinfo
+   89  ls -lh
+   90  ls -lh amazon_reviews_us_Books_v1_02.tsv 
+   91  grep -i "great" amazon_reviews_us_Books_v1_02.tsv > great.txt
+   92  wc great.txt
+   93  script assignment1.txt
+   94  mv assignment1.txt a1.txt
+   95  less a1.txt
+   96  nano a1.txt
+   97  fg
+   98  cd a1
+   99  mkdir a1
+  100  cp a1.txt /a1/a1.txt
+  101  cp a1.txt /a1
+  102  cp a1.txt a1
+  103  ls a1
+  104  cd a1
+  105  git init
+  106  git add .
+  107  git log
+  108  git status
+  109  git commit -m "Initial commit"
+  110  git remote add origin https://github.com/sunnyxu2/a1.git
+  111  git push -u origin main
+  112  git branch main
+  113  git push -u origin main
+  114  cut -f 2 amazon_reviews_us_Books_v1_02.tsv > customers.txt
+  115  cut -f 4 amazon_reviews_us_Books_v1_02.tsv > products.txt
+  116  cut -f 9 amazon_reviews_us_Books_v1_02.tsv > helpful_votes.txt
+  117  sort helpful_votes.txt 
+  118  man head
+  119  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  120  man sed
+  121  man awk
+  122  man cut
+  123  man cut --fields
+  124  ls
+  125  rm dummy
+  126  rm -r dummy
+  127  rm -r dummy9001
+  128  rm -r dummy2
+  129  ls
+  130  mkdir test
+  131  history > test/cmds.txt
+  132  rm -r test
+  133  mkdir worksheet3
+  134  cut -f 2 amazon_reviews_us_Books_v1_02.tsv > worksheet3/customers.txt
+  135  less worksheet3/customers.txt
+  136  mv worksheet3/customers.txt /
+  137  mv worksheet3/customers.txt customers.txt
+  138  ls worksheet3
+  139  cut -f 4 amazon_reviews_us_Books_v1_02.tsv > products.txt
+  140  cut -f 9 amazon_reviews_us_Books_v1_02.tsv > helpful_votes.txt
+  141  man uniq
+  142  script worksheet3/ws3.txt
+  143  script worksheet3/ws3.txt
+  144  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  145  cut -f 2 amazon_reviews_us_Books_v1_02.tsv > customers.txt 
+  146  cut -f 4 amazon_reviews_us_Books_v1_02.tsv > products.txt 
+  147  cut -f 9 amazon_reviews_us_Books_v1_02.tsv > helpful_votes.txt 
+  148  uniq -c customers.txt > customers_uniq.txt
+  149  uniq -c products.txt > products_uniq.txt
+  150  uniq -c helpful_votes.txt > helpful_votes_uniq.txt
+  151  sort customers_uniq.txt 
+  152  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  153  cut -f 2 amazon_reviews_us_Books_v1_02.tsv > customers.txt
+  154  cut -f 4 amazon_reviews_us_Books_v1_02.tsv > products.txt 
+  155  cut -f 9 amazon_reviews_us_Books_v1_02.tsv > helpful_votes.txt
+  156  head -n 1 customers.txt
+  157  head -n 2 customers.txt
+  158  head -n 2 products.txt 
+  159  head -n 2 helpful_votes.txt
+  160  uniq -c customers.txt customers_uniq.txt 
+  161  uniq -c products.txt products_uniq.txt 
+  162  uniq -c helpful_votes.txt helpful_votes_uniq.txt 
+  163  sort customers_uniq.txt customers_uniq_sort.txt
+  164  sort customers_uniq.txt > customers_uniq_sort.txt
+  165  sort products_uniq.txt > products_uniq_sort.txt
+  166  sort helpful_votes_uniq.txt > helpful_votes_uniq_sort.txt
+  167  head -n 4 customers_uniq_sort.txt 
+  168  sort -r customers_uniq.txt > customers_uniq_sort.txt
+  169  sort -r products_uniq.txt > products_uniq_sort.txt
+  170  sort -r helpful_votes_uniq.txt > helpful_votes_uniq_sort.txt
+  171  head -n 4 customers_uniq_sort.txt 
+  172  head -n 4 products_uniq_sort.txt 
+  173  head -n 1 helpful_votes_uniq_sort.txt 
+  174  sort -r -k 2 helpful_votes_uniq.txt > helpful_votes_uniq_sort.txt 
+  175  head -n 1 helpful_votes_uniq_sort.txt 
+  176  head -n 2 helpful_votes_uniq_sort.txt 
+  177  cat helpful_votes_uniq_sort.txt 
+  178  vi helpful_votes_uniq_sort.txt 
+  179  sort -nr -k 2 helpful_votes_uniq.txt > helpful_votes_uniq_sort.txt 
+  180  head -n 2 helpful_votes_uniq_sort.txt 
+  181  tail -n 2 helpful_votes_uniq_sort.txt 
+  182  head -n 10 customers_uniq_sort.txt 
+  183  head -n 10 products_uniq_sort.txt 
+  184  head -n 10 helpful_votes_uniq_sort.txt 
+  185  script worksheet3/ws3.txt 
+  186  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  187  cut -f 2 amazon_reviews_us_Books_v1_02.tsv customers.txt
+  188  head - n 1 amazon_reviews_us_Books_v1_02.tsv 
+  189  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  190  cut -f 2 amazon_reviews_us_Books_v1_02.tsv > customers.txt
+  191  cut -f 4 amazon_reviews_us_Books_v1_02.tsv > products.txt
+  192  cut -f 9 amazon_reviews_us_Books_v1_02.tsv > upvotes.txt
+  193  sort -n upvotes.txt > upvotes_sorted.txt
+  194  uniq -c upvotes_sorted.txt > upvotes_sorted_uniq.txt
+  195  head -n 10 upvotes_sorted_uniq.txt
+  196  tail -n 10 upvotes_sorted_uniq.txt
+  197  sort -r customers.txt > customers_sorted.txt
+  198  head -n 10 customers_sorted.txt
+  199  sort -r products.txt > products_sorted.txt
+  200  head -n 10 products_sorted.txt
+  201  uniq -c customers_sorted.txt > customers_sorted_uniq.txt
+  202  uniq -c products_sorted.txt > products_sorted_uniq.txt
+  203  sort -r customers_sorted_uniq.txt > customers_sorted_uniq_sorted.txt
+  204  sort -r products_sorted_uniq.txt > products_sorted_uniq_sorted.txt
+  205  head -n 10 customers_sorted_uniq_sorted.txt 
+  206  head -n 10 products_sorted_uniq_sorted.txt 
+  207  cp upvotes_sorted_uniq.txt worksheet3/upvotes_sorted_uniq.txt
+  208  rm worksheet3/upvotes_sorted_uniq.txt 
+  209  ls worksheet3
+  210  head -n 10 upvotes_sorted_uniq.txt 
+  211  tail -n 10 upvotes_sorted_uniq.txt 
+  212  history > worksheet3/cmds.log

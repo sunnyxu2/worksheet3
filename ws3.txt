@@ -1,0 +1,128 @@
+Script started on 2021-09-15 03:43:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="63"]
+
+----SCROLL DOWN TO WHERE IT SAYS "QUESTION REALM"----
+
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head - n 1 amazon_reviews_us_Books_v1_02.tsv 
+==> standard input <==
+^C
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head - n 1 amazon_reviews_us_Books_v1_02.tsv [1P
+marketplace	customer_id	review_id	product_id	product_parent	product_title	product_category	star_rating	helpful_votes	total_votes	vine	verified_purchase	review_headline	review_body	review_date
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 2 amazon_reviews_us_Books_v1_02.tsv > customers.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 4 amazon_reviews_us_Books_v1_02.tsv > products.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 9 amazon_reviews_us_Books_v1_02.tsv > upvotes.tt[Kxt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ sort -n u[Kupvotes.txt > upvotes_sorted.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ uniq -c upvotes_sorted.txt > upvotes_sorted_uniq.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n[Kn 10 upvotes_sorted_uniq.txt
+ 459924 0
+      1 helpful_votes
+ 408857 1
+ 333718 2
+ 269068 3
+ 215443 4
+ 176301 5
+ 144403 6
+ 120319 7
+ 101095 8
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ tail -n 10 upvotes_Sorte[K[K[K[K[Ksorted_uniqt[K.tt[Kxt
+      1 3081
+      1 3176
+      1 3179
+      1 3339
+      1 3345
+      1 3517
+      1 4452
+      1 5385
+      1 6539
+      1 15835
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ uniq -c custm[Komers.txt cu[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksort cus[K[K[K-r customerx.tx[K[K[K[Ks.txt customers[K[K[K[K[K[K[K[K[K>custo[K[K[K[K[K customers.sort[K[K[K[K[K_sorted.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 customers_sorted.txt
+customer_id
+53096589
+53096589
+53096589
+53096589
+53096589
+53096589
+53096589
+53096589
+53096589
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 customers_sorted.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13@sort -r customers.txt >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kproducts.txt > products_sorted.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 products_sorted.txt
+product_id
+B008W3IU6I
+B008GPOJ1C
+B0083TTJPC
+B00731BVMU
+B003NHR7GC
+B002YX0CNQ
+B002NPCU8U
+B002JSC0MC
+B002GJ093G
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ uniq -c p[Kcustomers_sorted.txt > customers_sorted.[K_uniq.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ uniq -c products_sorted.txt > products_sorted.[K_u[Kn[Kuniq.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ sort -r customers_sorted_uniq.txt > customers_sorted_uniq_sorted.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ sort -r products_sorted_uniq.txt > cu[K[Kproducts_sorted_uniq_sorted.txt
+
+
+
+
+----QUESTION REALM----
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 customers_sorted_q[Kuniq_sorted.txt 
+----QUESTION 1----
+  21922 50122160 (#1)
+   9964 50732546 (#2)
+   2664 52615377 (#3)
+   2215 45041039
+   1797 50776149
+   1786 50913245
+   1643 20595117
+   1622 45273033
+   1416 39569598
+   1384 49693975
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head - n 10 [K[K[K[K[K[Kn 10 cust[K[K[K[Kproducts_sorted_q[Kuniq_sorted.txt 
+----QUESTION 2----
+   4625 043935806X (#1)
+   3739 0439139597 (#2)
+   2666 0525947647 (#3)
+   2615 0895260174
+   2584 0385504209
+   2366 0590353403
+   2052 0439784549
+   2024 0316666343
+   1795 1400050308
+   1772 0312864590
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cp upvotes_sorted.[K_uniq.txt .[Kworksheet3/cu[K[Kupvotes_sorted_uniq.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ rm worksheet3/upvotes_sorted_uniq.txt 
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ ls worksheet3
+ws3.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 upvotes_sorted_uniq.txt 
+----QUESTION 3----
+
+There are too many "helpful_votes," so I have displayed the top 9 most common upvotes and the bottom 10 common upvotes
+
+
+ 459924 0
+      1 helpful_votes
+ 408857 1
+ 333718 2
+ 269068 3
+ 215443 4
+ 176301 5
+ 144403 6
+ 120319 7
+ 101095 8
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 upvotes_sorted_uniq.txt [1P[1P[1P[1P[1P[1@t[1@s[1@i[1P[1P[1@a[1@i[1@l[1@ 
+      1 3081
+      1 3176
+      1 3179
+      1 3339
+      1 3345
+      1 3517
+      1 4452
+      1 5385
+      1 6539
+      1 15835
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cmds[K[K[K[Khistory > worksheet3/cmds.log
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ exit
+
+Script done on 2021-09-15 03:54:37+00:00 [COMMAND_EXIT_CODE="0"]
