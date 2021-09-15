@@ -1,6 +1,21 @@
 Script started on 2021-09-15 03:43:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="63"]
 
-----SCROLL DOWN TO WHERE IT SAYS "QUESTION REALM"----
+QUESTION ANSWERS:
+QUESTION 1:
+The top 3 customers are:
+1. 50122160
+2. 50732546
+3. 52615377
+QUESTION 2:
+The top 3 books reviewed are:
+1. 043935806X
+2. 0439139597
+3. 0525947647
+QUESTION 3:
+The lowest amount of upvotes is 0, and the highest is 15,835. That alone suggests that there are too many
+to list for the sake of this question.
+
+----SCROLL DOWN TO WHERE IT SAYS "QUESTION REALM" FOR WHICH LINES CORRESPOND TO WHICH QUESTION----
 
 ]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head - n 1 amazon_reviews_us_Books_v1_02.tsv 
 ==> standard input <==
