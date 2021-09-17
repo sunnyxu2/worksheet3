@@ -1,143 +1,40 @@
-Script started on 2021-09-15 03:43:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="63"]
-
-QUESTION ANSWERS:
-QUESTION 1:
-The top 3 customers are:
-1. 50122160
-2. 50732546
-3. 52615377
-QUESTION 2:
-The top 3 books reviewed are:
-1. 043935806X
-2. 0439139597
-3. 0525947647
-QUESTION 3:
-The lowest amount of upvotes is 0, and the highest is 15,835. That alone suggests that there are too many
-to list for the sake of this question.
-
-----SCROLL DOWN TO WHERE IT SAYS "QUESTION REALM" FOR WHICH LINES CORRESPOND TO WHICH QUESTION----
-
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head - n 1 amazon_reviews_us_Books_v1_02.tsv 
-==> standard input <==
-^C
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head - n 1 amazon_reviews_us_Books_v1_02.tsv [1P
-marketplace	customer_id	review_id	product_id	product_parent	product_title	product_category	star_rating	helpful_votes	total_votes	vine	verified_purchase	review_headline	review_body	review_date
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 2 amazon_reviews_us_Books_v1_02.tsv > customers.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 4 amazon_reviews_us_Books_v1_02.tsv > products.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 9 amazon_reviews_us_Books_v1_02.tsv > upvotes.tt[Kxt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ sort -n u[Kupvotes.txt > upvotes_sorted.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ uniq -c upvotes_sorted.txt > upvotes_sorted_uniq.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n[Kn 10 upvotes_sorted_uniq.txt
- 459924 0
-      1 helpful_votes
- 408857 1
- 333718 2
- 269068 3
- 215443 4
- 176301 5
- 144403 6
- 120319 7
- 101095 8
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ tail -n 10 upvotes_Sorte[K[K[K[K[Ksorted_uniqt[K.tt[Kxt
-      1 3081
-      1 3176
-      1 3179
-      1 3339
-      1 3345
-      1 3517
-      1 4452
-      1 5385
-      1 6539
-      1 15835
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ uniq -c custm[Komers.txt cu[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksort cus[K[K[K-r customerx.tx[K[K[K[Ks.txt customers[K[K[K[K[K[K[K[K[K>custo[K[K[K[K[K customers.sort[K[K[K[K[K_sorted.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 customers_sorted.txt
-customer_id
-53096589
-53096589
-53096589
-53096589
-53096589
-53096589
-53096589
-53096589
-53096589
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 customers_sorted.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13@sort -r customers.txt >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kproducts.txt > products_sorted.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 products_sorted.txt
-product_id
-B008W3IU6I
-B008GPOJ1C
-B0083TTJPC
-B00731BVMU
-B003NHR7GC
-B002YX0CNQ
-B002NPCU8U
-B002JSC0MC
-B002GJ093G
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ uniq -c p[Kcustomers_sorted.txt > customers_sorted.[K_uniq.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ uniq -c products_sorted.txt > products_sorted.[K_u[Kn[Kuniq.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ sort -r customers_sorted_uniq.txt > customers_sorted_uniq_sorted.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ sort -r products_sorted_uniq.txt > cu[K[Kproducts_sorted_uniq_sorted.txt
-
-
-
-
-----QUESTION REALM----
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 customers_sorted_q[Kuniq_sorted.txt 
-----QUESTION 1----
-  21922 50122160 (#1)
-   9964 50732546 (#2)
-   2664 52615377 (#3)
-   2215 45041039
-   1797 50776149
-   1786 50913245
-   1643 20595117
-   1622 45273033
-   1416 39569598
-   1384 49693975
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head - n 10 [K[K[K[K[K[Kn 10 cust[K[K[K[Kproducts_sorted_q[Kuniq_sorted.txt 
-----QUESTION 2----
-   4625 043935806X (#1)
-   3739 0439139597 (#2)
-   2666 0525947647 (#3)
-   2615 0895260174
-   2584 0385504209
-   2366 0590353403
-   2052 0439784549
-   2024 0316666343
-   1795 1400050308
-   1772 0312864590
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cp upvotes_sorted.[K_uniq.txt .[Kworksheet3/cu[K[Kupvotes_sorted_uniq.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ rm worksheet3/upvotes_sorted_uniq.txt 
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ ls worksheet3
-ws3.txt
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 upvotes_sorted_uniq.txt 
-----QUESTION 3----
-
-There are too many "helpful_votes," so I have displayed the top 9 most common upvotes and the bottom 10 common upvotes
-
-
- 459924 0
-      1 helpful_votes
- 408857 1
- 333718 2
- 269068 3
- 215443 4
- 176301 5
- 144403 6
- 120319 7
- 101095 8
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ head -n 10 upvotes_sorted_uniq.txt [1P[1P[1P[1P[1P[1@t[1@s[1@i[1P[1P[1@a[1@i[1@l[1@ 
-      1 3081
-      1 3176
-      1 3179
-      1 3339
-      1 3345
-      1 3517
-      1 4452
-      1 5385
-      1 6539
-      1 15835
-]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cmds[K[K[K[Khistory > worksheet3/cmds.log
+Script started on 2021-09-17 03:16:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 3[K2 amazon_reviews_us_Bookx_v1[K[K[K[Ks_v1_02.tsv | tail -n +2 | sort -r |u[K uniq -c | sort - r | head -n 3[1P[C[C[C[C[C[C[C[C[C[C[C[C[C
+  21922 50122160
+   9964 50732546
+   2664 52615377
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 2 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -r | uniq -c | sort -r | head -n 3[1@][1P[1P[1@4
+   4625 043935806X
+   3739 0439139597
+   2666 0525947647
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 4 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -r | uniq -c | sort -r | head -n 3[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K-n > upvotes.l[K[K_long.txt
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -nn[K -m 1 -e "100" upvotes_long.txt
+[32m[K3826[m[K[36m[K:[m[KB000[01;31m[K100[m[KRFW
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "100" upvotes_long.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46@cut -f 4 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -n >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@9
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 9 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -n > upvotes_long.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46Pgrep -n -m 1 -e "100"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[32m[K3082587[m[K[36m[K:[m[K[01;31m[K100[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "100" upvotes_long.txt[C[C[C[C[C[1P[1P[1P[1@2[2@00
+[32m[K3099521[m[K[36m[K:[m[K[01;31m[K200[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "200" upvotes_long.txt[1P[1P[1P[1@"[1@3[C[1@0[C[1@0[1P
+[32m[K3102980[m[K[36m[K:[m[K[01;31m[K300[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "300" upvotes_long.txt[C[1P[1@4
+[32m[K3104163[m[K[36m[K:[m[K[01;31m[K400[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "400" upvotes_long.txt3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46@cut -f 9 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -n >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46Pgrep -n -m 1 -e "100"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46@cut -f 4 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -n >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr | uniq -c | sort -r | head -n 3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnano worksheet3/cmds.log[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5@history >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccut -f 2 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -r | uniq -c | sort -r | head -n 3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Pn > upvotes_long.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46Pgrep -n -m 1 -e "100"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46@cut -f 9 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -n >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46Pgrep -n -m 1 -e "100"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgrep -n -m 1 -e "400" upvotes_long.txt[1P[1@5
+[32m[K3104706[m[K[36m[K:[m[K[01;31m[K500[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "500" upvotes_long.txt[1P[1@6
+[32m[K3105011[m[K[36m[K:[m[K[01;31m[K600[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "600" upvotes_long.txt[C[1P[1@7
+[32m[K3105181[m[K[36m[K:[m[K[01;31m[K700[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "700" upvotes_long.txt[1P[1@8
+[32m[K3105279[m[K[36m[K:[m[K[01;31m[K800[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "800" upvotes_long.txt[1P[1@9
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "900" upvotes_long.txt8[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C9[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgrep -n -m 1 -e "900" upvotes_long.txt[C[C[C[1P[1@1
+[32m[K3082587[m[K[36m[K:[m[K[01;31m[K100[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "100" upvotes_long.txt[1@0
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -n -m 1 -e "1000" upvotes_long.txt[1P[C[1@1
+[32m[K3105384[m[K[36m[K:[m[K[01;31m[K1001[m[K
+]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ wc upvotes_long.txt
+3105520 3105520 7024580 upvotes_long.txt
 ]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ exit
 
-Script done on 2021-09-15 03:54:37+00:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2021-09-17 03:23:18+00:00 [COMMAND_EXIT_CODE="0"]
