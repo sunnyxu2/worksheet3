@@ -1,4 +1,18 @@
-    1  history
-    2  script worksheet3/ws3.txt
-    3  head worksheet3/ws3.txt
-    4  history > worksheet3/cmds.log
+    1   history
+    2   script worksheet3/ws3.txt
+    3   cut -f 2 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -r | uniq -c | sort -r | head -n 3
+    4   cut -f 4 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -r | uniq -c | sort -r | head -n 3
+    5   cut -f 9 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -n > upvotes_long.txt
+    6   grep -n -m 1 -e "100" upvotes_long.txt
+    7   grep -n -m 1 -e "200" upvotes_long.txt
+    8   grep -n -m 1 -e "300" upvotes_long.txt
+    9   grep -n -m 1 -e "400" upvotes_long.txt
+    10  grep -n -m 1 -e "500" upvotes_long.txt
+    11  grep -n -m 1 -e "600" upvotes_long.txt
+    12  grep -n -m 1 -e "700" upvotes_long.txt
+    13  grep -n -m 1 -e "800" upvotes_long.txt
+    14  grep -n -m 1 -e "900" upvotes_long.txt
+    15  grep -n -m 1 -e "901" upvotes_long.txt
+    16  grep -n -m 1 -e "1000" upvotes_long.txt
+    17  grep -n -m 1 -e "1001" upvotes_long.txt
+
