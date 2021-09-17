@@ -1,12 +1,16 @@
 Script started on 2021-09-17 03:16:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
 ]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 3[K2 amazon_reviews_us_Bookx_v1[K[K[K[Ks_v1_02.tsv | tail -n +2 | sort -r |u[K uniq -c | sort - r | head -n 3[1P[C[C[C[C[C[C[C[C[C[C[C[C[C
-  21922 50122160
-   9964 50732546
-   2664 52615377
+QUESTION 1
+Occurences	Customer ID
+  	21922 	50122160
+   	9964 	50732546
+   	2664 	52615377
 ]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 2 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -r | uniq -c | sort -r | head -n 3[1@][1P[1P[1@4
-   4625 043935806X
-   3739 0439139597
-   2666 0525947647
+QUESTION 2
+Occurences	ISBN
+   	4625 	043935806X
+   	3739 	0439139597
+   	2666 	0525947647
 ]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ cut -f 4 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | sort -r | uniq -c | sort -r | head -n 3[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K-n > upvotes.l[K[K_long.txt
 ]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ grep -nn[K -m 1 -e "100" upvotes_long.txt
 [32m[K3826[m[K[36m[K:[m[KB000[01;31m[K100[m[KRFW
@@ -38,3 +42,15 @@ Script started on 2021-09-17 03:16:49+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ]0;xu@f6linux15: ~[01;32mxu@f6linux15[00m:[01;34m~[00m$ exit
 
 Script done on 2021-09-17 03:23:18+00:00 [COMMAND_EXIT_CODE="0"]
+
+QUESTION 3
+Per previous revisions of this assignment, the upvotes uniq reveals that there's too many numbers to list out every occurence, so I've just used grep to bucket the numbers into buckets of size 100 (except for 701+)
+Occurences	Range
+3082587		0-100
+16934		101-200
+3459		201-300
+1183		301-400
+543		401-500
+170		501-600
+98		601-700
+242		701+
